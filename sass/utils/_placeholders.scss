@@ -1,0 +1,41 @@
+%container {
+    width: 1200px;
+
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+%section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+%list {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+%link {
+    text-decoration: none;
+}
+
+%visually-hidden {
+    width: 1px;
+    height: 1px;
+
+    margin: -1px;
+
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+
+%reset-padding-top {
+    padding-top: 0px;
+}
+
+%reset-padding-bottom {
+    padding-bottom: 0px;
+}

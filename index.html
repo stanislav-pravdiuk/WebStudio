@@ -24,6 +24,54 @@
       <div class="header__container container">
         <nav class="header__nav">
           <a href="./index.html" class="link logo">Web<Studio class="logo__text">Studio</span></a>
+            <button type="button" class="menu-btn js-open-menu js-menu-container">
+              <svg 
+              width="40" 
+              height="40" 
+              aria-controls="menu"
+              aria-label="selctor mobile menu" 
+              aria-expanded="false">
+                <use class="menu-btn__icon-navigation" 
+                href="./images/icon.svg#icon-navigation"></use>
+                <use class="menu-btn__icon-navigation-close" 
+                href="./images/icon.svg#icon-navigation-close"></use>
+              </svg>
+            </button>
+            <div class="menu js-menu-container" id="menu">
+              <ul class="list menu__nav">
+            <li class="menu__item">
+              <a class="link menu__link" href="./index.html">Студія</a>
+            </li>
+            <li class="menu__item">
+              <a class="link menu__link" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="menu__item">
+              <a class="link menu__link" href="#">Контакти</a></li>
+          </ul>
+        <ul class="list menu__contact">
+          <li class="menu__item">
+            <a class="link menu__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+          <li class="menu__item">
+            <a class="link menu__link" href="tel:+380961111111">
+              >+38 096 111 11 11</a>
+          </li>
+        </ul>
+              <ul class="list menu__social">
+            <li>
+              <a class="menu__link" href="instagram.com">Instagramm</a>
+            </li>
+            <li>
+              <a class="menu__link" href="Twitter.com">twitter</a>
+            </li>
+            <li>
+              <a class="social__link" href="facebook.com">Facebook</a>
+            </li>
+            <li>
+              <a class="social__link" href="linkedin.com">linkedin</a>
+            </li>
+          </ul>
+            </div>
           <ul class="list site-nav">
             <li class="site-nav__item">
               <a class="link site-nav__link site-nav__link--current" href="./index.html">Студія</a>
@@ -479,5 +527,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

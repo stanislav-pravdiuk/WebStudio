@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: row;
     min-height: 60px;
 }
 
@@ -29,7 +30,7 @@
 }
 
 .menu-btn {
-    display: inline-flex;
+    display: block;
     margin: 0;
     padding: 0;
     border: none;
@@ -55,7 +56,8 @@
 .menu-mobile__container {
     display: flex;
 
-    background: $white-text-color;
+    align-items: center;
+        justify-content: center;
 
     &.is-open {
         display: block;
@@ -66,12 +68,31 @@
 
         position: absolute;
         top: 100%;
-        left: 0;
-        width: 100%;
+        left: 50%;
+        translate: -50%;
+        width: 480px;
+        height: 796px;
+
+        background: burlywood;
+
     }   
 }
 
 .menu-mobile__nav {
-    display: flex;
-    align-items: center;
+    @extend %list;
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: center;
+    }
+    
+}
+
+.menu-mobile-contact {
+    @extend %list;
+}
+
+.menu-mobile__icon {
+    @media screen and (max-width: $mobile-max) {
+        display: none;
+    }
 }

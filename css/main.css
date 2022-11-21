@@ -70,13 +70,6 @@ textarea {
   color: rgb(0, 0, 0);
 }
 
-@media screen and (max-width: 767px) {
-  .site-nav,
-.list-contact {
-    display: none;
-  }
-}
-
 .menu-btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -95,17 +88,29 @@ textarea {
 .menu-btn.is-open .icon-menu {
   display: none;
 }
+@media screen and (min-width: 767px) {
+  .menu-btn {
+    display: none;
+  }
+}
 
 .menu-mobile__container {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background: rgb(255, 255, 255);
 }
 .menu-mobile__container.is-open {
   display: block;
+}
+@media screen and (max-width: 767px) {
+  .menu-mobile__container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
 }
 
 /* --------------------------------------modal--------------------------- */

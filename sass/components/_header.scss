@@ -28,13 +28,6 @@
     color: $primary-logo-color;
 }
 
-.site-nav,
-.list-contact {
-    @media screen and (max-width: $mobile-max) {
-        display: none;
-    }
-}
-
 .menu-btn {
     display: inline-flex;
     margin: 0;
@@ -53,20 +46,27 @@
     &.is-open .icon-menu {
         display: none;
     }
+
+    @media screen and (min-width: $mobile-max) {
+        display: none;
+    }
 }
 
 .menu-mobile__container {
-    display: none;
-    
-    position: absolute;
-    top: 100%;
-    left: 0;
-
-    width: 100%;
+    display: flex;
 
     background: $white-text-color;
 
     &.is-open {
         display: block;
     }
+
+    @media screen and (max-width: $mobile-max) {
+        display: none;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }   
 }

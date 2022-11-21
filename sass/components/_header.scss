@@ -2,6 +2,7 @@
 .header {
     position: relative;
 }
+
 .header__container {
     @extend %container;
 }
@@ -44,18 +45,22 @@
     .menu-btn__icon-navigation-close {
         display: none;
     }
+
     &.is-open .menu-btn__icon-navigation-close {
         display: block;
     }
-    
+
     &.is-open .menu-btn__icon-navigation {
+        display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
         display: none;
     }
 }
 
 .menu {
     display: none;
-
     position: absolute;
     top: 100%;
     left: 0;
@@ -73,8 +78,8 @@
     line-height: 47px;
     letter-spacing: 0.02em;
     color: $primary-text-color;
-    
+
     &.is-open {
         display: block;
-    } 
+    }
 }

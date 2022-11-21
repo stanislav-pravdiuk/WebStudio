@@ -28,8 +28,8 @@
     color: $primary-logo-color;
 }
 
-.site-nav,
-.list-contact {
+.menu__nav,
+.menu__contact {
     @media screen and (max-width: $mobile-max) {
         display: none;
     }

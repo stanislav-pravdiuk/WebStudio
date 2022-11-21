@@ -71,8 +71,8 @@ textarea {
 }
 
 @media screen and (max-width: 767px) {
-  .site-nav,
-.list-contact {
+  .menu__nav,
+.menu__contact {
     display: none;
   }
 }

@@ -28,8 +28,8 @@
     color: $primary-logo-color;
 }
 
-.menu__nav,
-.menu__contact {
+.site-nav,
+.list-contact {
     @media screen and (max-width: $mobile-max) {
         display: none;
     }
@@ -42,42 +42,29 @@
     border: none;
     background-color: transparent;
 
-    .menu-btn__icon-navigation-close {
+    & .icon-cross {
         display: none;
     }
 
-    &.is-open .menu-btn__icon-navigation-close {
+    &.is-open .icon-cross {
         display: block;
     }
 
-    &.is-open .menu-btn__icon-navigation {
-        display: none;
-    }
-
-    @media screen and (min-width: $tablet) {
+    &.is-open .icon-menu {
         display: none;
     }
 }
 
-.menu {
+.menu-mobile__container {
     display: none;
+    
     position: absolute;
     top: 100%;
     left: 0;
+
     width: 100%;
 
-    padding-top: 48px;
-    padding-bottom: 48px;
-    padding-left: 40px;
-    padding-right: 83px;
-
-    height: 796px;
-
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 47px;
-    letter-spacing: 0.02em;
-    color: $primary-text-color;
+    background: $white-text-color;
 
     &.is-open {
         display: block;

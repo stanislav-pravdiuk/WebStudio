@@ -71,8 +71,8 @@ textarea {
 }
 
 @media screen and (max-width: 767px) {
-  .menu__nav,
-.menu__contact {
+  .site-nav,
+.list-contact {
     display: none;
   }
 }
@@ -86,39 +86,25 @@ textarea {
   border: none;
   background-color: transparent;
 }
-.menu-btn .menu-btn__icon-navigation-close {
+.menu-btn .icon-cross {
   display: none;
 }
-.menu-btn.is-open .menu-btn__icon-navigation-close {
+.menu-btn.is-open .icon-cross {
   display: block;
 }
-.menu-btn.is-open .menu-btn__icon-navigation {
+.menu-btn.is-open .icon-menu {
   display: none;
 }
-@media screen and (min-width: 768px) {
-  .menu-btn {
-    display: none;
-  }
-}
 
-.menu {
+.menu-mobile__container {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
-  padding-top: 48px;
-  padding-bottom: 48px;
-  padding-left: 40px;
-  padding-right: 83px;
-  height: 796px;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 47px;
-  letter-spacing: 0.02em;
-  color: rgb(33, 33, 33);
+  background: rgb(255, 255, 255);
 }
-.menu.is-open {
+.menu-mobile__container.is-open {
   display: block;
 }
 

@@ -51,13 +51,16 @@
     @media screen and (min-width: $mobile-max) {
         display: none;
     }
+    z-index: 1;
 }
 
 .menu-mobile__container {
     display: flex;
 
     align-items: center;
-        justify-content: center;
+    justify-content: center;
+
+    
 
     &.is-open {
         display: block;
@@ -65,34 +68,107 @@
 
     @media screen and (max-width: $mobile-max) {
         display: none;
-
         position: absolute;
-        top: 100%;
+        top: -16px;
         left: 50%;
         translate: -50%;
         width: 480px;
-        height: 796px;
-
-        background: burlywood;
-
+        
+        padding-top: 48px;
+        padding-bottom: 48px;
+        padding-left: 40px;
+        padding-right: 40px;
+        
+        background: $head-bg-color;
     }   
 }
 
-.menu-mobile__nav {
+.list-nav {
     @extend %list;
-    @media screen and (min-width: $tablet) {
-        display: flex;
-        align-items: center;
-    }
+}
+
+.list-nav__item {
+    margin-bottom: 32px;
+    &:nth-child(3) {
+        margin-bottom: 306px;
+        }
+}
+
+.list-nav__link {
+    
+    @extend %link;
+
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 0.85;
+    letter-spacing: 0.02em;
+    color: $primary-text-color;
+}
+
+.list-contact {
+    @extend %list;
+    display: flex;
+    flex-direction: column-reverse;
     
 }
 
-.menu-mobile-contact {
-    @extend %list;
-}
-
-.menu-mobile__icon {
+.list-contact__icon {
     @media screen and (max-width: $mobile-max) {
         display: none;
     }
+}
+
+.list-contact__item {
+    margin-bottom: 64px;
+    &:nth-child(2) {
+            margin-bottom: 32px;
+        }
+}
+
+
+
+.list-contact__link {
+    @extend %link;
+    
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 0.85;
+    letter-spacing: 0.02em;
+    color: $secondary-text-color;
+    
+    &.list-contact__link--stylization {
+        font-size: 34px;
+        color: $accent-color;
+    }
+}
+
+.list-links {
+    @extend %list;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 22px;
+}
+
+.list-links__item {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid $third-border-color;
+    &:nth-child(1) {
+        padding-left: 0;
+    }
+    &:nth-child(4) {
+        padding-right: 0;
+        border-right: none;
+    }
+
+}
+
+.list-links__link {
+    @extend %link;
+    font-weight: 500;
+        font-size: 18px;
+        line-height: 0.81;
+        letter-spacing: 0.02em;
+        color: $accent-color;
 }

@@ -36,6 +36,11 @@ textarea {
   }
 }
 
+.hero {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .list-links, .list-contact, .list-nav {
   padding: 0;
   margin: 0;
@@ -103,6 +108,20 @@ textarea {
   }
 }
 
+.menu-mobile__icon {
+  fill: currentColor;
+  cursor: pointer;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-mobile__icon:focus, .menu-mobile__icon:hover {
+  fill: rgb(33, 150, 243);
+}
+
 .menu-mobile__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -146,6 +165,15 @@ textarea {
   line-height: 0.85;
   letter-spacing: 0.02em;
   color: rgb(33, 33, 33);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.list-nav__link:hover, .list-nav__link:focus {
+  color: rgb(33, 150, 243);
 }
 
 .list-contact {
@@ -216,6 +244,22 @@ textarea {
   line-height: 0.81;
   letter-spacing: 0.02em;
   color: rgb(33, 150, 243);
+}
+
+.hero {
+  background-color: rgb(47, 48, 58);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/heroimg.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/heroimg.jpg);
+  height: 400px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 /* --------------------------------------modal--------------------------- */

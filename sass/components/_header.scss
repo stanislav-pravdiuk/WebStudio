@@ -54,6 +54,20 @@
     z-index: 1;
 }
 
+.menu-mobile__icon {
+    fill: currentColor;
+    cursor: pointer;
+    
+        transition-property: fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+        &:focus,
+        &:hover {
+            fill: $accent-color;
+        }
+}
+
 .menu-mobile__container {
     display: flex;
 
@@ -103,6 +117,15 @@
     line-height: 0.85;
     letter-spacing: 0.02em;
     color: $primary-text-color;
+
+    transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+        &:hover,
+        &:focus {
+            color: $accent-color;
+        }
 }
 
 .list-contact {

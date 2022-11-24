@@ -1,4 +1,6 @@
 .hero {
+    // @extend %section;
+
     background-color: $footer-bg-color;
     background-image: linear-gradient($hero-gradient,
     $hero-gradient), url(../images/heroimg.jpg);
@@ -13,53 +15,53 @@
     background-size: cover;
 
     text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
-
-    @extend %section;
-
+    padding-top: 118px;
+    padding-bottom: 118px;
 }
 
-// .hero__container {
-//     @extend %container;
-// }
+.hero__container {
+    @extend %container;
+}
 
-// .hero__title {
-//     color: $white-text-color;
+.hero__title {
+    color: $white-text-color;
 
-//     font-weight: 900;
-//     font-size: 44px;
-//     line-height: 1.4;
-//     text-align: center;
-//     letter-spacing: 0.06em;
-//     text-transform: uppercase;
+    font-weight: 900;
+    // font-size: 44px;
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
 
-//     margin-bottom: 30px;
-//     margin-top: 0px;
-// }
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
 
-// .hero__btn {
-//     color: $white-text-color;
-//     background-color: $accent-color;
+.hero__btn {
+    color: $white-text-color;
+    background-color: $accent-color;
 
-//     font-family: 'Roboto';
-//     font-weight: 700;
-//     font-size: 16px;
-//     line-height: 1.9;
-//     letter-spacing: 0.06em;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
 
-//     cursor: pointer;
-//     border-radius: 4px;
-//     border: 1px solid transparent;
-//     box-shadow: 0px 4px 4px $shadow-color;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    box-shadow: 0px 4px 4px $shadow-color;
 
-//     padding: 10px 32px;
+    padding: 10px 24px;
+    // width: 200px;
+    height: 50px;
+    
 
-//     transition-property: background-color;
-//     transition-duration: 250ms;
-//     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-//     &:hover {
-//         background-color: $hover-btn;
-//     }
-// }
+    &:hover {
+        background-color: $hover-btn;
+    }
+}

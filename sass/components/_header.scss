@@ -167,10 +167,15 @@
 
 .list-links {
     @extend %list;
+
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 22px;
+
+    @media screen and (min-width: $mobile-max) {
+        display: none;    
+    }
 }
 
 .list-links__item {

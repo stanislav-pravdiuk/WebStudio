@@ -2,6 +2,7 @@
 
 .features {
     @extend %section;
+    // @extend %reset-padding-bottom;
 }
 
 .features__container {
@@ -21,9 +22,9 @@
     // display: inline-block;
     // margin-right: 30px;
     margin-bottom: 30px;
-
     &:last-child {
-        margin-right: 0px;
+        margin-bottom: 0;
+        margin-right: 0;
     }
 }
 

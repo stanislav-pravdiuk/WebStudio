@@ -5,11 +5,6 @@ body {
   font-family: "roboto";
   letter-spacing: 0.03em;
 }
-@media screen and (max-width: 767px) {
-  body {
-    padding-top: 16px;
-  }
-}
 
 textarea {
   resize: none;
@@ -36,12 +31,12 @@ textarea {
   }
 }
 
-.clients, .team, .work, .features {
+.clients, .team, .work, .features, .hero {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 @media screen and (max-width: 767px) {
-  .clients, .team, .work, .features {
+  .clients, .team, .work, .features, .hero {
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -153,20 +148,18 @@ textarea {
 }
 .menu-mobile__container.is-open {
   display: block;
+  position: absolute;
+  top: 0;
+  width: 480px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background: rgb(255, 255, 255);
 }
 @media screen and (max-width: 767px) {
   .menu-mobile__container {
     display: none;
-    position: absolute;
-    top: -16px;
-    left: 50%;
-    translate: -50%;
-    width: 480px;
-    padding-top: 48px;
-    padding-bottom: 48px;
-    padding-left: 40px;
-    padding-right: 40px;
-    background: rgb(255, 255, 255);
   }
 }
 
@@ -282,6 +275,10 @@ textarea {
           align-items: center;
 }
 
+.requisites {
+  text-align: center;
+}
+
 .logo__text--inverse {
   color: rgb(255, 255, 255);
 }
@@ -332,6 +329,7 @@ textarea {
 
 .social {
   margin-top: 60px;
+  text-align: center;
 }
 
 .social__title {
@@ -388,6 +386,7 @@ textarea {
 
 .mailing {
   margin-top: 60px;
+  text-align: center;
 }
 
 .mailing__lable {
@@ -399,8 +398,14 @@ textarea {
   color: rgb(255, 255, 255);
 }
 
+.mailing__input-btn {
+  margin-top: 20px;
+  outline: none;
+}
+
 .mailing__input {
-  width: 358px;
+  width: 100%;
+  max-width: 450px;
   height: 50px;
   padding-left: 16px;
   padding-top: 15px;
@@ -419,6 +424,7 @@ textarea {
 }
 
 .mailing__btn {
+  position: relative;
   cursor: pointer;
   background: rgb(33, 150, 243);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -438,12 +444,20 @@ textarea {
   background: rgb(24, 140, 232);
 }
 
+.mailing__icon {
+  position: absolute;
+  top: 13px;
+  left: 155px;
+  width: 24px;
+  height: 24px;
+}
+
 .hero {
   background-color: rgb(47, 48, 58);
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/heroimg.jpg);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/heroimg.jpg);
   height: 400px;
-  max-width: 480px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   background-repeat: no-repeat;
@@ -523,6 +537,7 @@ textarea {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  padding-top: 8px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -544,14 +559,13 @@ textarea {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   .modal {
     position: absolute;
     top: 50%;
     left: 50%;
     translate: -50% -50%;
     max-width: 450px;
-    width: 100%;
   }
 }
 
@@ -562,7 +576,6 @@ textarea {
   width: 30px;
   height: 30px;
   margin-right: 8px;
-  margin-top: 8px;
   margin-left: auto;
   margin-bottom: auto;
   border-radius: 50%;
@@ -592,7 +605,9 @@ textarea {
 
 .modal__title {
   margin-top: 2px;
-  margin-bottom: 4px;
+  margin-bottom: 12px;
+  padding-left: 40px;
+  padding-right: 40px;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -601,11 +616,11 @@ textarea {
 }
 
 .modal__form {
-  width: 528px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 40px;
   padding-right: 40px;
+  padding-bottom: 40px;
 }
 
 .modal__field {
@@ -639,6 +654,7 @@ textarea {
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 42px;
+  width: 370px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -702,11 +718,12 @@ textarea {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  margin-top: 28px;
+  margin-top: 20px;
   margin-bottom: 0px;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
+  line-height: 0.85;
   color: rgb(117, 117, 117);
   cursor: pointer;
 }
@@ -739,7 +756,7 @@ textarea {
 
 .agreement__check-icon {
   position: absolute;
-  left: 21px;
+  left: 8px;
 }
 
 .agreement__link {
@@ -753,7 +770,7 @@ textarea {
 .modal__btn-send {
   width: 200px;
   height: 50px;
-  margin-top: 40px;
+  margin-top: 30px;
   background: rgb(33, 150, 243);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -929,6 +946,29 @@ textarea {
   margin-bottom: 30px;
 }
 
+.clients__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.clients__item {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.clients__item:nth-child(even) {
+  padding-right: 0;
+}
+.clients__item:nth-child(odd) {
+  padding-left: 0;
+}
+
 .clients__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -939,11 +979,8 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 210px;
+  width: 100%;
   height: 92px;
-  margin-right: 15px;
-  margin-left: 15px;
-  margin-bottom: 30px;
   border: 1px solid rgb(175, 177, 184);
   border-radius: 4px;
   color: rgb(175, 177, 184);

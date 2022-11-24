@@ -17,6 +17,7 @@
 
 .requisites {
     // display: block;
+    text-align: center;
 }
 
 .logo__text--inverse {
@@ -84,6 +85,7 @@
     // margin-left: 70px;
     // margin-top: 10px;
     margin-top: 60px;
+    text-align: center;
 }
 
 .social__title {
@@ -144,6 +146,7 @@
     // margin-top: 10px;
     margin-top: 60px;
     // margin-left: 93px;
+    text-align: center;
 }
 
 .mailing__lable {
@@ -156,17 +159,19 @@
     
 }
 
-// .mailing__input-btn {
-//     // display: flex;
-//     margin-top: 20px;
+.mailing__input-btn {
+    // display: flex;
+    margin-top: 20px;
 
-//     position: relative;
+    
 
-//     outline: none;
-// }
+    outline: none;
+}
 
 .mailing__input {
-    width: 358px;
+    // width: 358px;
+    width: 100%;
+    max-width: 450px;
     height: 50px;
     // margin-right: 12px;
     padding-left: 16px;
@@ -188,6 +193,7 @@
 }
 
 .mailing__btn {
+    position: relative;
     cursor: pointer;
     background: $accent-color;
     box-shadow: 0px 4px 4px $shadow-color;
@@ -211,11 +217,11 @@
     }
 }
 
-// .mailing__icon {
-//     position: absolute;
-//     top: 13px;
-//     right: 28px;
+.mailing__icon {
+    position: absolute;
+    top: 13px;
+    left: 155px;
 
-//     width: 24px;
-//     height: 24px;
-// }
+    width: 24px;
+    height: 24px;
+}

@@ -1,6 +1,6 @@
 /* ----------------------------Page header---------------------------- */
 .header {
-    position: relative;
+    position: relative
 }
 
 .header__container {
@@ -69,6 +69,7 @@
 }
 
 .menu-mobile__container {
+    // @extend %container;
     display: flex;
 
     align-items: center;
@@ -78,22 +79,24 @@
 
     &.is-open {
         display: block;
+        position: absolute;
+            top: 0;
+            // left: 0;
+            // translate: 0;
+            width: 480px;
+            // height: 100%;
+        
+            padding-top: 48px;
+            padding-bottom: 48px;
+            padding-left: 40px;
+            padding-right: 40px;
+        
+            background: $head-bg-color;
     }
 
     @media screen and (max-width: $mobile-max) {
         display: none;
-        position: absolute;
-        top: -16px;
-        left: 50%;
-        translate: -50%;
-        width: 480px;
         
-        padding-top: 48px;
-        padding-bottom: 48px;
-        padding-left: 40px;
-        padding-right: 40px;
-        
-        background: $head-bg-color;
     }   
 }
 

@@ -5,6 +5,7 @@
 
 .header__container {
     @extend %container;
+    
 }
 
 .header__nav {
@@ -81,10 +82,10 @@
         display: block;
         position: absolute;
             top: 0;
-            // left: 0;
-            // translate: 0;
+            left: 50%;
+            translate: -50%;
             width: 480px;
-            // height: 100%;
+            // height: auto;
         
             padding-top: 48px;
             padding-bottom: 48px;

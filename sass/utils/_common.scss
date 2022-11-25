@@ -8,9 +8,11 @@ body {
     letter-spacing: 0.03em;
 }
 
-// img {
-//     display: block;
-// }
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
 textarea {
     resize: none;

@@ -6,6 +6,12 @@ body {
   letter-spacing: 0.03em;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 textarea {
   resize: none;
 }
@@ -150,6 +156,8 @@ textarea {
   display: block;
   position: absolute;
   top: 0;
+  left: 50%;
+  translate: -50%;
   width: 480px;
   padding-top: 48px;
   padding-bottom: 48px;

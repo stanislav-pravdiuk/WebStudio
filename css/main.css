@@ -525,12 +525,19 @@ textarea {
 .hero__title {
   color: rgb(255, 255, 255);
   font-weight: 900;
-  line-height: 1.4;
+  font-size: 26px;
+  line-height: 1.61;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 30px;
   margin-top: 0px;
+}
+@media screen and (min-width: 1600px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .hero__btn {
@@ -546,7 +553,9 @@ textarea {
   border: 1px solid transparent;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  padding: 10px 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 200px;
   height: 50px;
   -webkit-transition-property: background-color;
   transition-property: background-color;

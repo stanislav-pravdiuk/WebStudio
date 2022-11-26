@@ -2,22 +2,83 @@
     @extend %section;
 
     background-color: $footer-bg-color;
-    background-image: linear-gradient($hero-gradient,
-    $hero-gradient), url(../images/heroimg.jpg);
 
-    height: 400px;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    padding-top: 118px;
+    padding-bottom: 118px;
 
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
 
     text-align: center;
-    padding-top: 118px;
-    padding-bottom: 118px;
+
+    @media screen and (max-width: $mobile-max) {
+        background-image: linear-gradient($hero-gradient,
+                $hero-gradient), url(../images/hero480.jpg);
+        height: 400px;
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width: $tablet) {
+        background-image: linear-gradient($hero-gradient,
+                $hero-gradient), url(../images/hero768.jpg);
+        height: 400px;
+        max-width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+        background-image: linear-gradient($hero-gradient,
+                $hero-gradient), url(../images/hero1600.jpg);
+        height: 600px;
+        max-width: 1600px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
 }
+
+@media screen and (max-width: $mobile-max) {
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient($hero-gradient,
+                    $hero-gradient),
+                url(../images/hero480@2x.jpg);
+        }
+    }
+}
+
+@media screen and (min-width: $tablet) {
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient($hero-gradient,
+                    $hero-gradient), url(../images/hero768@2x.jpg);
+        }
+    }
+}
+
+@media screen and (min-width: $desktop) {
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient($hero-gradient,
+                    $hero-gradient), url(../images/hero1600@2x.jpg);
+        }
+    }
+}
+
 
 .hero__container {
     @extend %container;
@@ -55,7 +116,7 @@
     padding: 10px 24px;
     // width: 200px;
     height: 50px;
-    
+
 
     transition-property: background-color;
     transition-duration: 250ms;

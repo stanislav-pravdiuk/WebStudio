@@ -16,23 +16,23 @@ textarea {
   resize: none;
 }
 
-.clients__container, .team__container, .features__container, .hero__container, .footer__container, .header__container {
+.team__container, .features__container, .hero__container, .footer__container, .header__container {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
 }
 @media screen and (min-width: 480px) {
-  .clients__container, .team__container, .features__container, .hero__container, .footer__container, .header__container {
+  .team__container, .features__container, .hero__container, .footer__container, .header__container {
     width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
-  .clients__container, .team__container, .features__container, .hero__container, .footer__container, .header__container {
+  .team__container, .features__container, .hero__container, .footer__container, .header__container {
     width: 768px;
   }
 }
 @media screen and (min-width: 1600px) {
-  .clients__container, .team__container, .features__container, .hero__container, .footer__container, .header__container {
+  .team__container, .features__container, .hero__container, .footer__container, .header__container {
     width: 1600px;
   }
 }
@@ -159,8 +159,8 @@ textarea {
   left: 50%;
   translate: -50%;
   width: 480px;
+  height: 796px;
   padding-top: 48px;
-  padding-bottom: 48px;
   padding-left: 40px;
   padding-right: 40px;
   background: rgb(255, 255, 255);
@@ -171,11 +171,15 @@ textarea {
   }
 }
 
+.list-nav {
+  margin-bottom: 366px;
+}
+
 .list-nav__item {
   margin-bottom: 32px;
 }
 .list-nav__item:nth-child(3) {
-  margin-bottom: 306px;
+  margin-bottom: 0;
 }
 
 .list-nav__link {
@@ -203,6 +207,7 @@ textarea {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+  margin-bottom: 64px;
 }
 
 @media screen and (max-width: 767px) {
@@ -211,10 +216,7 @@ textarea {
   }
 }
 
-.list-contact__item {
-  margin-bottom: 64px;
-}
-.list-contact__item:nth-child(2) {
+.list-contact__item:last-child {
   margin-bottom: 32px;
 }
 
@@ -955,6 +957,9 @@ textarea {
 }
 
 .clients__list {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -963,8 +968,8 @@ textarea {
 }
 
 .clients__item {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -ms-flex-preferred-size: calc((100% - 30px) / 2);
+      flex-basis: calc((100% - 30px) / 2);
   padding-top: 15px;
   padding-bottom: 15px;
   padding-right: 15px;

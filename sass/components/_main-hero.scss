@@ -85,17 +85,20 @@
 }
 
 .hero__title {
+    font-weight: 900;
     color: $white-text-color;
 
-    font-weight: 900;
-    font-size: 26px;
-    line-height: 1.61;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
 
     margin-bottom: 30px;
     margin-top: 0px;
+
+    @media screen and (max-width: $tablet-max) {
+        font-size: 26px;
+        line-height: 1.61;
+    }
 
     @media screen and (min-width: $desktop) {
         font-size: 44px;

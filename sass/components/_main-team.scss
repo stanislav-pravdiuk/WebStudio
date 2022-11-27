@@ -57,7 +57,7 @@
     @media screen and (min-width: $tablet) {
         flex-basis: calc((100% - 2 * 15px) / 2);
 
-        @media screen and (max-width: $desktop) {
+        @media screen and (max-width: $tablet-max) {
             &:nth-child(even) {
                 margin-right: 0;
             }
@@ -77,8 +77,6 @@
             margin-right: 0;
         }
     }
-
-   
 }
 
 .team__name-text {

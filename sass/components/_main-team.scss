@@ -10,15 +10,21 @@
 }
 
 .team__title {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 0.84px;
-    text-align: center;
-
-    // margin-bottom: 50px;
     margin-bottom: 30px;
-
     margin-top: 0px;
+    text-align: center;
+    font-weight: 700;
+
+    @media screen and (max-width: $tablet-max) {
+        font-size: 28px;
+        line-height: 1.17;
+    }
+
+    @media screen and (min-width: $desktop) {        
+        font-size: 36px;
+        line-height: 1.16;
+        margin-bottom: 50px;
+    }
 }
 
 .team__list {
@@ -31,27 +37,32 @@
 }
 
 .team__item {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    
+    box-shadow: 0px 1px 3px $alt-shadow-color,
+        0px 1px 1px $secondary-shadow-color,
+        0px 2px 1px $third-shadow-color;
+    border-radius: 0px 0px 4px 4px;
+    background-color: $white-text-color;
+
     @media screen and (max-width: $mobile-max) {
-        padding-bottom: 0px;
+        margin-right: 0px;
 
         &:last-child {
             margin-bottom: 0;
-        }
-
-        &:last-child {
-            margin-right: 0px;
         }
     }
 
     @media screen and (min-width: $tablet) {
         flex-basis: calc((100% - 2 * 15px) / 2);
 
-        @media screen and (max-width: $desktop){
+        @media screen and (max-width: $desktop) {
             &:nth-child(even) {
-                    margin-right: 0;
-                }
+                margin-right: 0;
+            }
         }
-        
+
         &:nth-last-child(-n + 2) {
             margin-bottom: 0;
         }
@@ -67,14 +78,7 @@
         }
     }
 
-    margin-right: 30px;
-    margin-bottom: 30px;
-    
-    box-shadow: 0px 1px 3px $alt-shadow-color,
-    0px 1px 1px $secondary-shadow-color,
-    0px 2px 1px $third-shadow-color;
-    border-radius: 0px 0px 4px 4px;
-    background-color: $white-text-color;
+   
 }
 
 .team__name-text {

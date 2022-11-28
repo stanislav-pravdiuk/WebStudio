@@ -23,17 +23,17 @@ textarea {
 }
 @media screen and (min-width: 480px) {
   .clients__container, .team__container, .work__container, .features__container, .hero__container, .footer__container, .header__container {
-    width: 480px;
+    width: 450px;
   }
 }
 @media screen and (min-width: 768px) {
   .clients__container, .team__container, .work__container, .features__container, .hero__container, .footer__container, .header__container {
-    width: 768px;
+    width: 738px;
   }
 }
 @media screen and (min-width: 1600px) {
   .clients__container, .team__container, .work__container, .features__container, .hero__container, .footer__container, .header__container {
-    width: 1600px;
+    width: 1200px;
   }
 }
 
@@ -120,22 +120,33 @@ textarea {
     min-height: 60px;
   }
 }
+@media screen and (min-width: 1600px) {
+  .header__nav {
+    min-height: 80px;
+  }
+}
 
 .logo {
   color: rgb(33, 150, 243);
   font-family: "raleway";
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.1;
 }
-@media screen and (min-width: 1600px) {
+@media screen and (max-width: 1599px) {
   .logo {
-    margin-right: 93px;
+    font-size: 24px;
+    line-height: 1.16;
   }
 }
 @media screen and (min-width: 768px) {
   .logo {
     margin-right: 88px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .logo {
+    margin-right: 93px;
+    font-size: 26px;
+    line-height: 1.19;
   }
 }
 
@@ -224,7 +235,13 @@ textarea {
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 282px;
-    margin-right: 66px;
+    margin-right: 46px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .list-nav {
+    width: 284px;
+    margin-right: 301px;
   }
 }
 
@@ -264,14 +281,29 @@ textarea {
   }
 }
 
+.list-nav__link--current {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgb(33, 150, 243);
+}
 @media screen and (min-width: 768px) {
-  .list-nav__link--current {
-    color: rgb(33, 150, 243);
-  }
   .list-nav__link--current::after {
     content: "";
     position: relative;
     top: 19px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: rgb(33, 150, 243);
+    border-radius: 2px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .list-nav__link--current::after {
+    content: "";
+    position: relative;
+    top: 30px;
     display: block;
     width: 100%;
     height: 4px;
@@ -330,6 +362,15 @@ textarea {
   }
 }
 
+@media screen and (min-width: 1600px) {
+  .list-contact__item {
+    margin-right: 40px;
+  }
+  .list-contact__item:last-child {
+    margin-right: 0;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .list-contact__item:last-child {
     margin-bottom: 32px;
@@ -354,6 +395,12 @@ textarea {
 }
 @media screen and (min-width: 768px) {
   .list-contact__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 14px;
     line-height: 1.16;
     -webkit-transition-property: color;

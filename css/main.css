@@ -468,10 +468,12 @@ textarea {
           align-items: center;
 }
 
-.footer__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 768px) {
+  .footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1599px) {
   .footer__container {
@@ -874,30 +876,47 @@ textarea {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  padding-top: 93px;
-  padding-bottom: 94px;
-  padding-left: 15px;
-  padding-right: 15px;
-  overflow-y: scroll;
 }
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
+@media screen and (max-width: 767px) {
+  .backdrop {
+    padding-top: 93px;
+    padding-bottom: 94px;
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow-y: scroll;
+  }
+}
+@media screen and (max-width: 1599px) {
+  .backdrop {
+    padding-top: 208px;
+    padding-bottom: 207px;
+    padding-left: 159px;
+    padding-right: 159px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .backdrop {
+    padding-top: 221px;
+    padding-bottom: 222px;
+    padding-left: 536px;
+    padding-right: 536px;
+  }
+}
 
 /* ------------------------------------------------------------------------- */
 .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
   background: rgb(255, 255, 255);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding-top: 8px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition-property: -webkit-transform;
@@ -908,18 +927,28 @@ textarea {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .backdrop.is-hidden .modal {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1599px) {
   .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
+    width: 100%;
     max-width: 450px;
+    padding-top: 8px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .modal {
+    width: 528px;
+    height: 581px;
   }
 }
 
@@ -952,6 +981,11 @@ textarea {
 .modal__btn-close:focus, .modal__btn-close:hover {
   color: rgb(24, 140, 232);
 }
+@media screen and (min-width: 1600px) {
+  .modal__btn-close {
+    margin-top: 8px;
+  }
+}
 
 .modal__icon-close {
   fill: currentColor;
@@ -960,21 +994,33 @@ textarea {
 .modal__title {
   margin-top: 2px;
   margin-bottom: 12px;
-  padding-left: 40px;
-  padding-right: 40px;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
   color: rgb(33, 33, 33);
 }
-
+@media screen and (max-width: 1599px) {
+  .modal__title {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
 .modal__form {
   margin-left: auto;
   margin-right: auto;
   padding-left: 40px;
   padding-right: 40px;
-  padding-bottom: 40px;
+}
+@media screen and (max-width: 1599px) {
+  .modal__form {
+    padding-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .modal__form {
+    width: 528px;
+  }
 }
 
 .modal__field {
@@ -1008,7 +1054,6 @@ textarea {
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 42px;
-  width: 370px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -1023,6 +1068,16 @@ textarea {
 }
 .modal__input-hover:focus-within .modal__input {
   border-color: rgb(24, 140, 232);
+}
+@media screen and (max-width: 1599px) {
+  .modal__input {
+    width: 370px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .modal__input {
+    width: 448px;
+  }
 }
 
 .modal__icon {
@@ -1072,14 +1127,23 @@ textarea {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  margin-top: 20px;
   margin-bottom: 0px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.71;
-  line-height: 0.85;
   color: rgb(117, 117, 117);
   cursor: pointer;
+}
+@media screen and (max-width: 1599px) {
+  .agreement {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .agreement {
+    margin-top: 28px;
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .agreement__input {
@@ -1110,7 +1174,16 @@ textarea {
 
 .agreement__check-icon {
   position: absolute;
-  left: 8px;
+}
+@media screen and (max-width: 1599px) {
+  .agreement__check-icon {
+    left: 8px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .agreement__check-icon {
+    left: 21px;
+  }
 }
 
 .agreement__link {

@@ -12,17 +12,15 @@
 
 .footer__container {
     @extend %container;
-    display: flex;
-
+    
     @media screen and (min-width: $tablet) {
+        display: flex;
 
         @media screen and (max-width: $tablet-max) {
             flex-wrap: wrap;
             justify-content: center;
         }
     }
-
-
 }
 
 .requisites {

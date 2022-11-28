@@ -468,24 +468,60 @@ textarea {
           align-items: center;
 }
 
-.requisites {
-  text-align: center;
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (min-width: 768px) and (max-width: 1599px) {
+  .footer__container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1599px) {
+  .requisites {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .requisites {
+    display: block;
+  }
 }
 
 .logo__text--inverse {
   color: rgb(255, 255, 255);
 }
 
-.requisites__adress {
-  margin-top: 28px;
+@media screen and (min-width: 1600px) {
+  .requisites__adress {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 1599px) {
+  .requisites__adress {
+    margin-top: 28px;
+  }
 }
 
-.requisites__item {
-  margin-top: 0px;
-  margin-bottom: 12px;
+@media screen and (max-width: 1599px) {
+  .requisites__item {
+    margin-top: 0px;
+    margin-bottom: 12px;
+  }
+  .requisites__item:last-child {
+    margin-bottom: 0px;
+  }
 }
-.requisites__item:last-child {
-  margin-bottom: 0px;
+@media screen and (min-width: 1600px) {
+  .requisites__item {
+    margin-bottom: 9px;
+  }
 }
 
 .requisites__location {
@@ -520,9 +556,26 @@ textarea {
   color: rgb(33, 150, 243);
 }
 
-.social {
-  margin-top: 60px;
-  text-align: center;
+@media screen and (max-width: 767px) {
+  .social {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .social {
+    margin-left: 105px;
+  }
+}
+@media screen and (max-width: 1599px) {
+  .social {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .social {
+    margin-left: 70px;
+    margin-top: 10px;
+  }
 }
 
 .social__title {
@@ -531,6 +584,11 @@ textarea {
   line-height: 1.14;
   text-transform: uppercase;
   color: rgb(255, 255, 255);
+}
+@media screen and (min-width: 1600px) {
+  .social__title {
+    margin-left: 7px;
+  }
 }
 
 .social__list {
@@ -577,9 +635,18 @@ textarea {
   background-color: rgb(33, 150, 243);
 }
 
-.mailing {
-  margin-top: 60px;
-  text-align: center;
+@media screen and (max-width: 1599px) {
+  .mailing {
+    margin-top: 60px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .mailing {
+    display: block;
+    margin-top: 10px;
+    margin-left: 93px;
+  }
 }
 
 .mailing__lable {
@@ -595,15 +662,20 @@ textarea {
   margin-top: 20px;
   outline: none;
 }
+@media screen and (min-width: 1600px) {
+  .mailing__input-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+  }
+}
 
 .mailing__input {
-  width: 100%;
-  max-width: 450px;
   height: 50px;
   padding-left: 16px;
   padding-top: 15px;
   padding-bottom: 15px;
-  margin-top: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -615,9 +687,21 @@ textarea {
 .mailing__input:focus-visible {
   border-color: rgb(33, 150, 243);
 }
+@media screen and (max-width: 1599px) {
+  .mailing__input {
+    width: 100%;
+    max-width: 450px;
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .mailing__input {
+    width: 358px;
+    margin-right: 12px;
+  }
+}
 
 .mailing__btn {
-  position: relative;
   cursor: pointer;
   background: rgb(33, 150, 243);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -625,7 +709,6 @@ textarea {
   border-radius: 4px;
   border: none;
   text-align: center;
-  margin-top: 20px;
   width: 200px;
   height: 50px;
   font-weight: 700;
@@ -636,13 +719,34 @@ textarea {
 .mailing__btn:focus, .mailing__btn:hover {
   background: rgb(24, 140, 232);
 }
+@media screen and (max-width: 1599px) {
+  .mailing__btn {
+    position: relative;
+    margin-top: 20px;
+    padding-right: 28px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .mailing__btn {
+    padding-right: 28px;
+  }
+}
 
 .mailing__icon {
   position: absolute;
   top: 13px;
-  left: 155px;
   width: 24px;
   height: 24px;
+}
+@media screen and (max-width: 1599px) {
+  .mailing__icon {
+    left: 155px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .mailing__icon {
+    right: 28px;
+  }
 }
 
 .hero {
@@ -1379,30 +1483,30 @@ textarea {
   .clients__item {
     -ms-flex-preferred-size: calc((100% - 30px) / 2);
         flex-basis: calc((100% - 30px) / 2);
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 15px;
-    padding-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
   }
   .clients__item:nth-child(even) {
-    padding-right: 0;
+    margin-right: 0;
   }
   .clients__item:nth-child(odd) {
-    padding-left: 0;
+    margin-left: 0;
   }
 }
 @media screen and (min-width: 1600px) {
   .clients__item {
     -ms-flex-preferred-size: calc((100% - 150px) / 6);
         flex-basis: calc((100% - 150px) / 6);
-    padding-right: 15px;
-    padding-left: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
   }
   .clients__item:first-child {
-    padding-left: 0;
+    margin-left: 0;
   }
   .clients__item:last-child {
-    padding-right: 0;
+    margin-right: 0;
   }
 }
 

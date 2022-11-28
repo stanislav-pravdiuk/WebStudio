@@ -32,16 +32,17 @@
     display: flex;
     align-items: center;
 
+    @media screen and (max-width: $mobile-max) {
+            min-height: 60px;
+        }
+    
+    @media screen and (min-width: $tablet) {
+            min-height: 80px;
+        }
+
     @media screen and (max-width: $tablet-max) {
         justify-content: space-between;
         flex-direction: row;
-        @media screen and (max-width: $mobile-max) {
-            min-height: 60px;
-        }
-    }
-
-    @media screen and (min-width: $tablet) {
-        min-height: 80px;
     }
 }
 

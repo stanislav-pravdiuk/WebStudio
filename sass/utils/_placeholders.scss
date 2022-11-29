@@ -11,7 +11,7 @@
         width: 738px;
     }
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1200px) {
         width: 1200px;
     }
 }
@@ -19,7 +19,7 @@
 %section {
     padding-top: 94px;
     padding-bottom: 94px;
-    @media screen and (max-width: 1599px) {
+    @media screen and (max-width: 1199px) {
             padding-top: 60px;
             padding-bottom: 60px;
         }

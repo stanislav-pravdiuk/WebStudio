@@ -115,10 +115,17 @@
         padding-bottom: 20px;
         padding-left: 24px;
         padding-right: 24px;
+        
 
         border-bottom: 1px solid $border-head-color;
         border-left: 1px solid $border-head-color;
         border-right: 1px solid $border-head-color;
+
+        @media screen and (min-width: $tablet) {
+            @media screen and (max-width: $tablet-max) {
+                height: 146px;
+            }
+        }
     }
 
     .examples__lable {
@@ -142,4 +149,5 @@
 
         margin-top: 0px;
         margin-bottom: 0px;
+        height: auto;
     }

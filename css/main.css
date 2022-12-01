@@ -218,24 +218,24 @@ textarea {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.menu-mobile__container.is-open {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  translate: -50%;
-  overflow: scroll;
-  max-width: 480px;
-  width: 100vw;
-  height: 100vh;
-  padding-top: 48px;
-  padding-left: 40px;
-  padding-right: 40px;
-  background: rgb(255, 255, 255);
-}
 @media screen and (max-width: 767px) {
   .menu-mobile__container {
     display: none;
+  }
+  .menu-mobile__container.is-open {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50%;
+    overflow: scroll;
+    max-width: 480px;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 48px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background: rgb(255, 255, 255);
   }
 }
 

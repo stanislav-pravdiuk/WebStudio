@@ -117,28 +117,29 @@
     align-items: center;
     justify-content: center;
 
-    &.is-open {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        translate: -50%;
-
-        overflow: scroll;
-        max-width: 480px;
-        // height: 796px;
-        width: 100vw;
-        height: 100vh;
-
-        padding-top: 48px;
-        padding-left: 40px;
-        padding-right: 40px;
-
-        background: $head-bg-color;
-    }
+    
 
     @media screen and (max-width: $mobile-max) {
         display: none;
+        &.is-open {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                translate: -50%;
+        
+                overflow: scroll;
+                max-width: 480px;
+                // height: 796px;
+                width: 100vw;
+                height: 100vh;
+        
+                padding-top: 48px;
+                padding-left: 40px;
+                padding-right: 40px;
+        
+                background: $head-bg-color;
+            }
     }
 }
 

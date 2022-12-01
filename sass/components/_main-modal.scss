@@ -10,6 +10,8 @@
 
     background-color: $backdrop-color;
 
+    overflow-y: scroll;
+
     opacity: 1;
     transition-property: opacity;
     transition-duration: 250ms;
@@ -25,7 +27,6 @@
         padding-bottom: 94px;
         padding-left: 15px;
         padding-right: 15px;
-        overflow-y: scroll;
     }
 
     @media screen and (max-width: $tablet-max) {

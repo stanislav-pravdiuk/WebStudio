@@ -66,6 +66,11 @@
         transform: scale(0.9);
     }
 
+    @media screen and (max-width: 479px) {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
     @media screen and (max-width: $tablet-max) {
         width: 100%;
         max-width: 450px;
@@ -83,6 +88,9 @@
     width: 30px;
     height: 30px;
 
+    @media screen and (max-width: 479px) {
+        margin-right: 0px;
+    }
     margin-right: 8px;
     margin-left: auto;
     margin-bottom: auto;
@@ -137,8 +145,12 @@
 .modal__form {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 40px;
-    padding-right: 40px;
+
+    @media screen and (min-width: $mobile) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
 
     @media screen and (max-width: $tablet-max) {
         padding-bottom: 40px;
@@ -195,7 +207,11 @@
         border-color: $hover-btn;
     }
 
-    @media screen and (max-width: $tablet-max) {
+    @media screen and (max-width: 479px) {
+        width: 100%;
+    }
+
+    @media screen and (min-width: $mobile) {
         width: 370px;
     }
     

@@ -57,9 +57,9 @@
         line-height: 1.16;
     }
     
-    @media screen and (min-width: $tablet) {
-        margin-right: 88px;
-    }
+    // @media screen and (min-width: $tablet) {
+    //     margin-right: 88px;
+    // }
 
     @media screen and (min-width: $desktop) {
         margin-right: 93px;
@@ -126,6 +126,7 @@
 
         width: 480px;
         height: 796px;
+
         padding-top: 48px;
         padding-left: 40px;
         padding-right: 40px;
@@ -292,6 +293,9 @@
     }
 
     @media screen and (min-width: $tablet) {
+        @media screen and (max-width: $tablet-max){
+            margin-bottom: 10px;
+        }
         display: flex;
         align-items: center;
             
